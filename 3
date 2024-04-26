@@ -1,0 +1,52 @@
+/*
+Confeccionar una clase que represente un empleado. Definir como atributos su nombre y su sueldo.
+Confeccionar los métodos para la carga, otro para imprimir sus datos y por último uno que imprima
+un mensaje si debe pagar impuestos (si el sueldo supera a 3000)
+
+*/
+#include "iostream" 
+using namespace std;
+
+class Empleado {
+private:
+    float sueldo;
+    char nombre[20];
+public:
+    void carga();
+    void imprimir();
+    void impuestos();
+};
+
+void Empleado::carga()
+{
+    cout << "Introducir el nombre del empleado" << endl;
+    cin.getline(nombre,20);
+    cout << "Introducir sueldo del empleado" << endl;
+    cin >> sueldo;
+}
+
+void Empleado::imprimir()
+{
+  cout << "El nombre del empleado es: " << nombre << endl;
+  cout << "El sueldo del empleado es: " << sueldo << endl;
+}
+
+void Empleado::impuestos()
+{
+  if(sueldo > 3000)
+  {
+      cout << "Debe pagar impuestos" << endl;
+  } else {
+      cout << "No debe pagar impuestos" << endl;
+  }
+  
+}
+
+int main()
+{
+   Empleado empleado1;
+   empleado1.carga();
+   empleado1.imprimir();
+   empleado1.impuestos();
+   return 0;
+}
