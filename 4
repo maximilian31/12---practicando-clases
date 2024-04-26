@@ -1,0 +1,68 @@
+/*
+ Implementar la clase operaciones. Se deben cargar dos valores enteros, calcular su suma, resta, 
+ multiplicación y división, cada una en un método, imprimir dichos resultados.
+*/
+#include "iostream"
+using namespace std;
+
+
+class Operaciones {
+private:
+    int valor1,valor2,suma1,resta1,multiplicacion1,division1;
+public:
+    void carga();
+    void suma();
+    void resta();
+    void multiplicacion();
+    void division();
+    void imprimir();
+};
+
+void Operaciones::carga()
+{
+    cout << "Carga los valores" << endl;
+    cout << "Cargar el primer valor" << endl;
+    cin >> valor1;
+    cout << "Cargar el segundo valor" << endl;
+    cin >> valor2;
+}
+
+void Operaciones::suma()
+{
+    suma1 = valor1 + valor2;
+}
+
+void Operaciones::resta()
+{
+    resta1 = valor1 - valor2;
+}
+
+void Operaciones::multiplicacion()
+{
+    multiplicacion1 = valor1 * valor2;
+}
+
+void Operaciones::division()
+{
+    division1 = valor1 / valor2;
+}
+
+void Operaciones::imprimir()
+{
+    cout << "La suma de los valores es: " << suma1 << endl;
+    cout << "La division de los valores es: " << division1 << endl;
+    cout << "La multiplicacion de los valores es: " << multiplicacion1 << endl;
+    cout << "La resta de los valores es: " << resta1 << endl;
+}
+
+int main()
+{
+   Operaciones operacion1;
+   operacion1.carga();
+   operacion1.suma();
+   operacion1.resta();
+   operacion1.multiplicacion();
+   operacion1.division();
+   operacion1.imprimir();
+   return 0;
+}
