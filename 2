@@ -1,0 +1,49 @@
+/*
+Desarrollar una clase que represente un punto en el plano y tenga los siguientes métodos:
+cargar los valores de x e y, imprimir en que cuadrante se encuentra dicho punto
+(concepto matemático, primer cuadrante si x e y son positivas, si x<0 e y>0 segundo cuadrante, etc.)
+
+*/
+#include "iostream" 
+using namespace std;
+
+class puntoEnElPlano {
+private:
+     float x,y;
+public:
+     void valores();
+     void imprimir();
+};
+
+void puntoEnElPlano::valores()
+{
+    cout << "Cargar la coordenada X" << endl;
+    cin >> x;
+    cout << "Cargar la coordenada Y" << endl;
+    cin >> y;
+}
+
+void puntoEnElPlano::imprimir()
+{
+    if(x>0 and y>0)
+    {
+       cout << "Esta en el primer cuadrante" << endl;
+    }else if(x<0 and y>0)
+       {
+           cout << "Esta en el segundo cuadrante" << endl;
+       } else if(x<0 and y<0) 
+           {
+               cout << "Esta en el tercer cuadrante" << endl;
+           } else
+               {
+                   cout << "Esta en el cuarto cuadrante" << endl;
+               }
+}
+
+int main()
+{
+    puntoEnElPlano punto;
+    punto.valores();
+    punto.imprimir();
+    return 0;
+}
